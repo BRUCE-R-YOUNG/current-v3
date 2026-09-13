@@ -45,6 +45,8 @@ python periodic_transfer.py --config config/edge.yaml
 
 起動直後に送信を試み、以後 transfer_seconds ごとに未送信画像を最大20件ずつ処理します。これは1回のHTTPへ20枚まとめる方式ではなく、画像ごとにPOSTします。滞留が増えた場合は間隔と予算を見直してください。
 
+端末には START（使用するキュー）、SENDING（送信開始）、SENT（PC受信確認済み）、FAILED（失敗・再送待ち）、PAUSED（予算不足）を表示します。待機中は約10秒ごとに WAIT と未送信件数・次の画像送信チェックまでの秒数を表示します。queued_images=0 は送る画像がない状態です。未送信件数にはバックオフ待ちも含まれます。HTTP通信中はタイムアウトまで表示更新が止まる場合があります。
+
 1回だけ送信処理を試す場合:
 ```bash
 python periodic_transfer.py --config config/edge.yaml --once

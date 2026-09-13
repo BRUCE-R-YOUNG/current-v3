@@ -5,6 +5,7 @@ import threading
 import time
 from pathlib import Path
 from urllib import request
+from urllib.error import HTTPError
 
 import cv2
 import numpy as np
@@ -185,6 +186,10 @@ def camera_service(cfg, root, store, mode, windows=None):
             count += 1
 
 
+def transfer_log(message):
+    print(f'[{time.strftime("%Y-%m-%d %H:%M:%S")}] {message}', flush=True)
+
+
 def send_pending(cfg, store, kind, should_stop=lambda: False):
     token = os.environ.get(cfg.token_env,'')
     if not cfg.server_url or not token:
@@ -200,25 +205,33 @@ def send_pending(cfg, store, kind, should_stop=lambda: False):
         # Reserve approximate headers and response bytes as well as body, including failed attempts.
         if not store.charge(kind,len(body)+2048,cfg):
             store.state('budget',dict(status='paused',reason='Transfer budget exhausted (UTC day/month)'))
+            transfer_log(f'PAUSED {kind}: transfer budget exhausted; data remains queued')
             break
         store.state('budget',dict(status='available'))
         req = request.Request(cfg.server_url.rstrip('/')+'/v3/ingest',data=body,method='POST',
                               headers={'Content-Type':'application/json','Authorization':f'Bearer {token}'})
         try:
+            transfer_log(f'SENDING {kind} id={event["id"]} bytes={len(body)}')
             with request.urlopen(req,timeout=cfg.timeout_seconds) as response:
                 result = json.loads(response.read(65536))
                 if result.get('event_id') != event['id']:
                     raise ValueError('Server acknowledgement did not match event_id')
             store.result(event['id'])
+            transfer_log(f'SENT {kind} id={event["id"]}: receiver acknowledged')
         except Exception as exc:
             store.result(event['id'],type(exc).__name__+': '+str(exc))
+            reason = f'HTTP {exc.code}' if isinstance(exc, HTTPError) else type(exc).__name__
+            transfer_log(f'FAILED {kind} id={event["id"]}: {reason}; retained for retry')
 
 
 def transfer_service(cfg,root,store,once=False):
     stop = root/'transfer.stop'
     with service_lock(root,'transfer'):
         stop.unlink(missing_ok=True)
+        transfer_log(f'START queue={store.path.resolve()} image_interval={cfg.transfer_seconds:g}s telemetry_interval={cfg.telemetry_seconds:g}s')
+        transfer_log('Ctrl+C to stop. SENT means the receiver acknowledged the event.')
         next_image,next_telemetry = 0,0
+        next_status = 0
         while not stop.exists():
             store.prune()
             now = time.monotonic()
@@ -229,6 +242,15 @@ def transfer_service(cfg,root,store,once=False):
                 send_pending(cfg,store,'telemetry',stop.exists)
                 next_telemetry = now+cfg.telemetry_seconds
             store.state('transfer',dict(status='running'))
+            if now >= next_status or once:
+                snapshot = store.snapshot()
+                pending = {kind: sum(row['count'] for row in snapshot['counts']
+                                     if row['kind'] == kind and not row['sent'])
+                           for kind in ('image', 'telemetry')}
+                remaining = max(0, next_image-time.monotonic())
+                transfer_log(f'WAIT queued_images={pending["image"]} queued_telemetry={pending["telemetry"]} next_image_check={remaining:.0f}s (includes retry-waiting events)')
+                next_status = now+10
             if once:
+                transfer_log('DONE single pass; queued events may remain. See SENT/FAILED/PAUSED above.')
                 break
             time.sleep(.2)

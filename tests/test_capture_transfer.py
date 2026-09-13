@@ -108,7 +108,7 @@ def receiver():
         thread.join()
 
 
-def test_http_capture_upload_ack_and_restart(tmp_path, monkeypatch, receiver):
+def test_http_capture_upload_ack_and_restart(tmp_path, monkeypatch, receiver, capsys):
     url, received = receiver
     monkeypatch.setenv('SVL_EDGE_TOKEN', 'test-token')
     cfg = EdgeConfig(server_url=url)
@@ -119,6 +119,11 @@ def test_http_capture_upload_ack_and_restart(tmp_path, monkeypatch, receiver):
     assert received == []
     runtime.transfer_service(cfg, tmp_path, store, once=True)
     assert len(received) == 1
+    output = capsys.readouterr().out
+    assert 'SENDING image' in output
+    assert 'SENT image' in output
+    assert 'queued_images=0' in output
+    assert 'test-token' not in output
     assert received[0]['prediction'] is None
     assert received[0]['jpeg_base64']
     assert store.pending('image') == []
@@ -126,13 +131,16 @@ def test_http_capture_upload_ack_and_restart(tmp_path, monkeypatch, receiver):
     assert len(received) == 1
 
 
-def test_http_failure_keeps_queue_and_retries(tmp_path, monkeypatch, receiver):
+def test_http_failure_keeps_queue_and_retries(tmp_path, monkeypatch, receiver, capsys):
     url, received = receiver
     monkeypatch.setenv('SVL_EDGE_TOKEN', 'wrong-token')
     cfg = EdgeConfig(server_url=url)
     store = Store(tmp_path / 'events.sqlite3')
     runtime.Collector(cfg, store).capture(np.zeros((48, 64, 3), dtype=np.uint8))
     runtime.send_pending(cfg, store, 'image')
+    output = capsys.readouterr().out
+    assert 'FAILED image' in output and 'HTTP 401' in output
+    assert 'wrong-token' not in output
     with store.connect() as db:
         event = dict(db.execute('SELECT * FROM events').fetchone())
         assert event['sent'] == 0
@@ -152,3 +160,16 @@ def test_capture_example_and_missing_token():
     cfg.token_env = 'SVL_TEST_DEFINITELY_MISSING_TOKEN'
     with pytest.raises(ValueError):
         check(cfg)
+
+
+def test_empty_server_url_diagnostic(monkeypatch):
+    monkeypatch.setenv('SVL_EDGE_TOKEN', 'test-secret-not-to-display')
+    with pytest.raises(ValueError, match='server_url is empty') as exc:
+        check(EdgeConfig())
+    assert 'test-secret-not-to-display' not in str(exc.value)
+
+
+def test_empty_token_diagnostic(monkeypatch):
+    monkeypatch.delenv('SVL_EDGE_TOKEN', raising=False)
+    with pytest.raises(ValueError, match='Token is empty'):
+        check(EdgeConfig(server_url='http://127.0.0.1:8001'))

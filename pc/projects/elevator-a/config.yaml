@@ -1,0 +1,60 @@
+project_name: Elevator A
+base_model: yolo26n.pt
+class_names:
+- object
+teacher_models: []
+platform:
+  projects_dir: projects
+  default_project: default
+paths:
+  data_dir: data
+  model_dir: models
+  run_dir: runs
+  database: data\state.sqlite3
+inference:
+  image_size: 640
+  conf_accept: 0.8
+  conf_review: 0.45
+  iou: 0.7
+  max_detections: 100
+review:
+  require_human_review: true
+  auto_accept_high_confidence: true
+labeling:
+  mode: teacher_only
+  teacher_until_min_samples: 500
+  self_conf_review: 0.6
+  self_conf_accept: 0.9
+training:
+  epochs: 30
+  batch: 8
+  patience: 10
+  device: cpu
+  image_size: 640
+  workers: 0
+  val_ratio: 0.2
+  min_train_images: 10
+  dataset_yaml: null
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  shear: 0.0
+  perspective: 0.0
+  fliplr: 0.0
+  flipud: 0.0
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+promotion:
+  min_map50: 0.5
+  max_map50_drop: 0.02
+  require_candidate_better_or_equal: true
+camera:
+  source: 0
+  capture_interval_seconds: 2.0
+  max_frames_per_session: 100
+  live_detect_confidence: 0.02
+  floor_confidence: 0.06
+  direction_confidence: 0.05
+  live_iou: 0.35
+  live_max_detections: 20
