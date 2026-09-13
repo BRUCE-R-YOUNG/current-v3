@@ -1,0 +1,17 @@
+[Unit]
+Description=Sustainable Vision capture without inference
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+SupplementaryGroups=video
+WorkingDirectory=/home/pi/svl/raspi
+ExecStart=/home/pi/svl/raspi/.venv/bin/python auto_capture.py --config /home/pi/svl/raspi/config/edge.yaml
+Restart=on-failure
+RestartSec=10
+KillSignal=SIGINT
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

@@ -1,32 +1,21 @@
-# Raspberry Pi側
+# Raspberry Pi: 収集・送信
 
-担当: カメラ、本番推論、NumPy集計、画像蓄積、PCへのHTTP転送。
-PC側の受信サーバー・学習は起動できません。
+モデルなしで画像を収集し、別プロセスでPCへ定期送信できます。
 
-## 配布ZIPから起動
-
-```bash
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements-inference.txt
-.venv/bin/python run.py init
-```
-
-生成される `config/edge.yaml` にカメラ、人物モデル、階数モデル、PCのHTTPS URLを設定します。`role: edge` を使用します。モデルファイルはZIPに含まれません。
+- [マニュアル全体](docs/README.md)
+- [Tailscale VPNの準備](docs/02-tailscale.md)
+- [推論なしキャプチャー・送信・自動起動](docs/03-capture-transfer.md)
+- [モデルを使う推論](docs/04-inference-training.md)
 
 ```bash
-export SVL_EDGE_TOKEN='PCと同じ共有トークン'
-.venv/bin/python run.py production
+python auto_capture.py --config config/edge.yaml
 ```
 
-別ターミナルで転送を起動します。
+別ターミナルでトークン設定後:
 
 ```bash
-export SVL_EDGE_TOKEN='PCと同じ共有トークン'
-.venv/bin/python run.py transfer
+python check_connection.py --config config/edge.yaml
+python periodic_transfer.py --config config/edge.yaml
 ```
 
-推論なしの撮影は `python run.py capture`。本番推論と同時には起動しません。収集・転送だけなら `requirements.txt` の依存関係だけで利用できます。
-
-ソースリポジトリーから実行する場合は `python raspi/run.py ...` を使用します。配布ZIPには必要な `app/edge` 共通コードを同梱するため、PCフォルダーや元のリポジトリーは不要です。
-
-キュー・ログは `config/runtime/edge/` に保存します。3秒5フレームの目標値、通信予算、ETAの仮定は同梱の `docs/v3-edge-pc.md` を参照してください。
+事前に requirements.txt のインストールと設定が必要です。両プロセスに同じ設定ファイルを指定します。Ctrl+Cで停止します。

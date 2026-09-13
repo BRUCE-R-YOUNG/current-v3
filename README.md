@@ -1,21 +1,12 @@
-# ファイル構成
+# Sustainable Vision Learning v3
 
-- `raspi/`: Raspberry Pi用。推論・画像蓄積・HTTP転送。
-- `pc/`: PC用。受信・ダッシュボード・学習。
-- `svl-raspi.zip`, `svl-pc.zip`: 初期配布用ZIP。トークン・モデル・ユーザーデータは含みません。
-- `move-manifest.json`: 今回の移動元・移動先。
+[運用マニュアルの入口](docs/README.md)
 
-PCの本日作成した設定・トークン・受信DB・UI確認用仮想環境は `pc/` に引き継ぎました。モデル学習・推論の追加依存関係はPC側READMEを参照してください。
+1. [PC受信サーバー](docs/01-pc.md) を準備してプロジェクトを作成。
+2. [Tailscale VPN](docs/02-tailscale.md) で別ネットワークを接続。
+3. [Raspiの推論なしキャプチャーと定期送信](docs/03-capture-transfer.md) を開始。
+4. 必要に応じて [推論と追加学習](docs/04-inference-training.md) を有効化。
 
-```powershell
-cd pc
-.\.venv\Scripts\python.exe run.py dashboard
-```
+配布は [Raspi用ZIP](svl-raspi.zip) と [PC用ZIP](svl-pc.zip) に分かれています。既存設定・モデル・保存データはZIPに含みません。
 
-ダッシュボード: http://127.0.0.1:8001/v3
-
-現在の接続トークン: `pc/config/runtime/server/access-token.txt`
-
-旧プロジェクト、旧モデル・画像、Gitリポジトリーは `../previous-versions/original-project-before-cleanup/` へ移動しています。全世代のコピーは同じ保管先の `backup-20260913-123719/` にあります。旧データは本日版のPCプロジェクトには自動投入していません。
-
-旧 `../yolo-continuous-learning/` には、Windowsにより移動できなかった `.pytest_cache` と空の `raspi/` のみ残っています。旧フォルダーを使用中のアプリ・ターミナルが閉じられるまで、フォルダー自体の移動はできません。
+旧版は隣の previous-versions に保管しています。現行コードは raspi / pc です。仮想環境は機器間やフォルダ間で使い回さず、各環境で作成してください。

@@ -1,0 +1,22 @@
+role: edge
+project_id: elevator-a
+device_id: raspi-01
+camera: '0'
+people_model: ''
+elevator_model: ''
+capture_seconds: 30
+duplicate_threshold: 0.02
+difficult_only: false
+roi: [0.0, 0.0, 1.0, 1.0]
+jpeg_long_edge: 640
+jpeg_quality: 65
+# Replace with the HTTPS origin printed by `tailscale serve status` on the PC.
+server_url: 'https://YOUR-PC.YOUR-TAILNET.ts.net'
+token_env: SVL_EDGE_TOKEN
+transfer_seconds: 300
+telemetry_seconds: 3
+timeout_seconds: 10
+daily_image_bytes: 5000000
+daily_transfer_bytes: 12000000
+monthly_transfer_bytes: 400000000
+spool_limit_bytes: 256000000

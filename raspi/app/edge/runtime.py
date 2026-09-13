@@ -154,6 +154,7 @@ def camera_service(cfg, root, store, mode, windows=None):
             wall = time.time()
             deadline = start+cfg.window_seconds
             frames = []
+            captured_frames = 0
             for index in range(cfg.frames_per_window):
                 target = start+index*cfg.window_seconds/cfg.frames_per_window
                 while time.monotonic()<target and not stop.exists():
@@ -163,6 +164,7 @@ def camera_service(cfg, root, store, mode, windows=None):
                 sequence, captured_at, frame = camera.get(sequence)
                 if frame is None:
                     continue
+                captured_frames += 1
                 observation = predictor(frame) if predictor else None
                 if observation is not None:
                     observation['captured_at'] = captured_at
@@ -179,7 +181,7 @@ def camera_service(cfg, root, store, mode, windows=None):
                 payload = summarize(frames,cfg,wall,wall+time.monotonic()-start)
                 payload.update(project_id=cfg.project_id,device_id=cfg.device_id,models=dict(people=Path(cfg.people_model).name,elevator=Path(cfg.elevator_model).name))
                 store.add('telemetry',payload,limit=cfg.spool_limit_bytes)
-            store.state(mode,dict(status='running',windows=count+1,actual_frames=len(frames),camera_sequence=sequence))
+            store.state(mode,dict(status='running',windows=count+1,actual_frames=captured_frames,inference_frames=len(frames),camera_sequence=sequence))
             count += 1
 
 
