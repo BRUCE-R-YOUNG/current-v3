@@ -1,0 +1,10 @@
+fastapi==0.116.1
+uvicorn==0.35.0
+python-multipart==0.0.20
+pydantic==2.11.7
+pydantic-settings==2.10.1
+PyYAML==6.0.2
+numpy==2.2.6
+opencv-python-headless==4.12.0.88
+Pillow==11.3.0
+# Install requirements-training.txt as well for labelling and training.

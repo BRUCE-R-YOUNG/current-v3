@@ -1,0 +1,226 @@
+INFO:     Started server process [52476]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+Local access token file: C:\Users\koyama\Documents\Codex\2026-09-02\referenced-chatgpt-conversation-this-is-an\outputs\current-v3\pc\config\runtime\server\access-token.txt
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52669 - "GET /v3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52669 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52669 - "GET /v3/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52669 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52669 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52669 - "GET /v3?page=train HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52669 - "GET /v3/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52669 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52669 - "GET /v3/files?path= HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52669 - "GET /v3?page=receiver HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52669 - "GET /v3/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50269 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50269 - "GET /v3?page=overview HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50269 - "GET /v3/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50269 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50269 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59800 - "GET /v3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57761 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61678 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61678 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61678 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61678 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61678 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61678 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3?page=train HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58011 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55137 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55137 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3?page=train HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3?page=overview HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55147 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55147 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62258 - "GET /v3/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62258 - "GET /v3/preview HTTP/1.1" 404 Not Found

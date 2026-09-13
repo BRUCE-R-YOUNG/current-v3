@@ -1,0 +1,42 @@
+[
+  {
+    "From": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\yolo-continuous-learning\\runs\\platform\\device-bundles-v3\\svl-raspi",
+    "To": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\current-v3\\raspi"
+  },
+  {
+    "From": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\yolo-continuous-learning\\runs\\platform\\device-bundles-v3\\svl-pc",
+    "To": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\current-v3\\pc"
+  },
+  {
+    "From": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\yolo-continuous-learning\\runs\\platform\\device-bundles-v3\\svl-raspi.zip",
+    "To": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\current-v3\\svl-raspi.zip"
+  },
+  {
+    "From": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\yolo-continuous-learning\\runs\\platform\\device-bundles-v3\\svl-pc.zip",
+    "To": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\current-v3\\svl-pc.zip"
+  },
+  {
+    "From": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\yolo-continuous-learning\\.venv-ui",
+    "To": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\current-v3\\pc\\.venv"
+  },
+  {
+    "From": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\yolo-continuous-learning\\config\\server.yaml",
+    "To": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\current-v3\\pc\\config\\server.yaml"
+  },
+  {
+    "From": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\yolo-continuous-learning\\config\\edge.yaml",
+    "To": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\current-v3\\raspi\\config\\edge.yaml"
+  },
+  {
+    "From": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\yolo-continuous-learning\\config\\runtime",
+    "To": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\current-v3\\pc\\config\\runtime"
+  },
+  {
+    "From": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\runs",
+    "To": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\previous-versions\\legacy-output-runs"
+  },
+  {
+    "From": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\yolo-continuous-learning",
+    "To": "C:\\Users\\koyama\\Documents\\Codex\\2026-09-02\\referenced-chatgpt-conversation-this-is-an\\outputs\\previous-versions\\original-project-before-cleanup"
+  }
+]

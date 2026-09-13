@@ -1,0 +1,72 @@
+role: server
+project_id: elevator-a
+device_id: edge-01
+camera: '0'
+people_model: ''
+elevator_model: ''
+device: cpu
+imgsz: 640
+confidence: 0.35
+people_classes:
+- person
+floor_map:
+  '1': 1
+  '2': 2
+  '3': 3
+  '4': 4
+  '5': 5
+  '6': 6
+  '7': 7
+  '8': 8
+  '9': 9
+  '10': 10
+  '11': 11
+  '12': 12
+  '13': 13
+  '14': 14
+  '15': 15
+  '16': 16
+  '17': 17
+  '18': 18
+  '19': 19
+  '20': 20
+up_classes:
+- up
+- UP
+down_classes:
+- down
+- Down
+- DOWN
+roi:
+- 0.0
+- 0.0
+- 1.0
+- 1.0
+window_seconds: 3.0
+frames_per_window: 5
+highest_floor: 20
+seconds_per_floor: 3.0
+stop_seconds: 5.0
+floor_stop_seconds: {}
+turnaround_seconds: 10.0
+capture_seconds: 30.0
+difficult_only: true
+difficult_confidence: 0.65
+duplicate_threshold: 0.02
+jpeg_long_edge: 640
+jpeg_quality: 65
+server_url: ''
+token_env: SVL_EDGE_TOKEN
+transfer_seconds: 300.0
+telemetry_seconds: 3.0
+timeout_seconds: 10.0
+daily_image_bytes: 5000000
+daily_transfer_bytes: 12000000
+monthly_transfer_bytes: 400000000
+spool_limit_bytes: 256000000
+dataset_yaml: ''
+epochs: 120
+batch: 16
+workers: 0
+promote_if_passed: false
+export_onnx: false
